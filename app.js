@@ -17,9 +17,11 @@ var commentRoutes    = require("./routes/comments.js"),
     indexRoutes      =   require("./routes/index.js");
     app.locals.moment = require("moment");
      
-   // mongoose.connect("mongodb://localhost/yelp_camp");
-    
-  mongoose.connect("mongodb://Drashti:password@ds147469.mlab.com:47469/yelpcamp");
+     
+    mongoose.connect(process.env.DATABASEURL);
+  
+  //mongoose.connect("mongodb://Drashti:password@ds147469.mlab.com:47469/yelpcamp");
+  
    
     app.use(bodyParser.urlencoded({extended:true}));
     app.set("view engine","ejs");
