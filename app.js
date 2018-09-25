@@ -17,7 +17,7 @@ var commentRoutes    = require("./routes/comments.js"),
     indexRoutes      =   require("./routes/index.js");
     app.locals.moment = require("moment");
      
-     
+     var url = process.env.DATABASEURL || "mongodb://localhost/go_camping";
     mongoose.connect(process.env.DATABASEURL);
   
   //mongoose.connect("mongodb://Drashti:password@ds147469.mlab.com:47469/yelpcamp");
